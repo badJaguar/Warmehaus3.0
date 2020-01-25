@@ -1,0 +1,15 @@
+.chip:focus {
+  outline: none;
+  border: 0;
+  background-color: white
+
+}
+a:hover {
+   color: white;
+   text-decoration: none
+}
+mat-chip-list{
+   display: block;
+   margin-block-start: 1%;
+   margin-block-end: 1%
+}

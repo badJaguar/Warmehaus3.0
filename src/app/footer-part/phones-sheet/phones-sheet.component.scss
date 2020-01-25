@@ -1,0 +1,28 @@
+img {
+    display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+p{
+    text-align-last: center;
+    font-weight: bold;
+    margin-top: 10px
+}
+.divider{
+    margin-top: 15px
+}
+
+.contacts{
+    margin-left: 25%;
+    margin-right: 25%;
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+}
+.contact-social{
+    display: flex;
+    justify-content: space-around;
+}

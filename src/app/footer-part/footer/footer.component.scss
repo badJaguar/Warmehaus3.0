@@ -1,0 +1,119 @@
+.footer {
+  background: linear-gradient(black, #500f0f, #535203);
+  color: white;
+  height: 100%;
+}
+
+strong {
+  color: white
+}
+
+.content {
+  margin-top: 2%
+}
+
+li,
+ul,
+p,
+a,
+mat-divider {
+  color: aliceblue;
+}
+
+h1,
+h2,
+h5 {
+  align-content: center;
+  align-items: center
+}
+
+.outerContainer {
+  position: sticky;
+  display: table;
+  justify-content: space-around;
+  flex-direction: row;
+  max-width: 400px;
+  align-self: center;
+}
+
+.innerContainer {
+  position: sticky;
+  display: inline-flexbox;
+  justify-content: left;
+  flex-direction: row;
+  max-width: 400px;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-self: center
+}
+
+.headPart {
+  display: table;
+  width: 300px;
+}
+
+.technology,
+.ul-pic {
+  height: 60px;
+  margin-top: 3%;
+  margin-bottom: 3%
+}
+
+.ul-pics {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+button:focus {
+  outline: none;
+  border: 0;
+  background: none
+}
+
+a:hover {
+  color: #ffac0c;
+  text-decoration: underline;
+  background: none
+}
+
+button {
+  background: none;
+  border: none;
+  border-radius: 3px
+}
+
+.ripple-container {
+  border-color: aliceblue;
+  border-style: solid;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30px;
+  height: 90%;
+  border-radius: 3px;
+  border-width: 1px
+}
+
+.avatar {
+  height: 60px;
+}
+
+.made-by {
+  padding-left: 1em;
+  padding-right: 2em
+}
+
+.right {
+  width: auto;
+}

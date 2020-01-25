@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bulma/css/bulma.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "../node_modules/material-icons-css/scss/material-icons.scss";
+
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing.dark-backdrop {
+  background: #000;
+  opacity: 0.85 !important;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fc0000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(56, 56, 56);
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+  border: 5px solid white;
+
+}
+
+/* Buttons */
+::-webkit-scrollbar-button:single-button {
+  background-color: #fc0000;
+  display: block;
+  border-style: solid;
+  height: 13px;
+  width: 16px;
+}
+
+/* Up */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #ffee00 transparent;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: transparent transparent #777777 transparent;
+}
+
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-width: 8px 8px 0 8px;
+  border-color: #ffee00 transparent transparent transparent;
+}
+
+::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  border-color: #777777 transparent transparent transparent;
+}
+
+
+html,
+body {
+  min-height: 100% !important;
+  height: 100%;
+  // max-width: 1248px; /* Можно подправить */
+  // margin-left: auto;
+  // margin-right: auto
+}
+
+body {
+  background: rgb(255, 255, 255);
+  margin-block-start: 70px;
+}

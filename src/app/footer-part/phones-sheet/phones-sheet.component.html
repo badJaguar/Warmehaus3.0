@@ -1,0 +1,42 @@
+<mat-nav-list>
+
+  <span mat-line>
+    <p>Связь через мессенджеры:</p>
+    <div class="contact-social contacts">
+
+      <a mat-item href=" https://t.me/warmehaus" target="_blank">
+        <img src="assets/images/telegram-7-569219.png" alt="Телеграм вармхауз Минск" height="55" width="55">
+      </a>
+
+      <a mat-item href="https://api.whatsapp.com/send?phone=375293523204" target="_blank">
+        <img src="assets/images/whatsapp-155-721985.png" alt="Вотсап вармхауз Минск" height="55" width="55">
+      </a>
+
+      <a mat-item href="viber://chat?number=+375293523204">
+        <img src="assets/images/social-41-512.png" alt="Viber вармхауз Минск" height="55" width="55">
+      </a>
+
+    </div>
+  </span>
+
+  <span class="call">
+
+    <mat-divider class="divider"></mat-divider>
+
+    <p>Позвонить:</p>
+  </span>
+
+  <a mat-list-item href="tel:+375-29-352-32-04" (click)="openLink()">
+    <img src="assets/images/velcom_logo.png" alt="Телефон вармхауз Минск" height="42" width="42">
+    <span mat-line>
+      <a>+375 (29) 352-32-04</a>
+    </span>
+  </a>
+
+  <a mat-list-item href="tel:+375-29-557-59-80" (click)="openLink()">
+    <img src="assets/images/iOS-logo-300x300.png" alt="Телефон вармхаус Минск" height="42" width="42">
+    <span mat-line>
+      <a>+375 (29) 557-59-80</a>
+    </span>
+  </a>
+</mat-nav-list>
