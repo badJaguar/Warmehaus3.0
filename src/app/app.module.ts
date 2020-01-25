@@ -22,6 +22,7 @@ import { SafeHtmlPipe } from './safe-html';
 import { CookieService } from 'ngx-cookie-service';
 import { ChipsComponent } from './header-part/chips/chips.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PinchZoomModule } from 'ngx-pinch-zoom';
 
 
 const EXTRA_BREAKPOINTS = [{
@@ -61,7 +62,8 @@ const EXTRA_BREAKPOINTS = [{
     OverlayModule,
     ScrollingModule,
     NgxJsonLdModule,
-    MaterialShareModule
+    MaterialShareModule,
+    PinchZoomModule
   ],
   entryComponents: [PhonesSheetComponent],
   exports: [],

@@ -1,0 +1,126 @@
+@media screen and (min-width: 930px) {
+
+  h1,
+  h2,
+  h5 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 930px) {
+  article {
+    max-width: 70%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+
+  article,
+  h1,
+  h2,
+  h5 {
+    max-width: 50%;
+    margin: auto;
+  }
+}
+
+.arrow-up {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  align-items: center;
+  align-content: center;
+}
+
+.arrow-border {
+  border: 3px solid red;
+  border-radius: 5px;
+  width: max-content;
+  padding: 3px;
+  margin-top: 5px;
+  float: right;
+}
+
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+  color: black;
+  background-color: #ffcb03;
+  font-weight: bold
+}
+
+button:focus {
+  outline: none;
+  border: 0;
+}
+
+.large-img {
+  width: 100%;
+  height: auto;
+  align-content: left
+}
+
+@media screen and (min-width: 1240px) {
+  .large-img {
+    width: 50%;
+    height: auto;
+    align-content: left
+  }
+}
+
+
+h1,
+h2,
+h5 {
+  text-align: center;
+  font-size: calc(1.5vw + 1.5vh);
+}
+
+.card {
+  max-width: 1488px;
+  margin: auto;
+}
+
+article {
+  width: 90%;
+  margin: auto;
+}
+
+.image {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.clearfix {
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  position: sticky;
+  align-content: center;
+  text-align: justify;
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  @media screen and (min-width: $min-vw) {
+    @each $property in $properties {
+      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+    }
+  }
+
+  @media screen and (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+
+.clearfix {
+  @include fluid-type(font-size, 600px, 1200px, 16px, 20px);
+}

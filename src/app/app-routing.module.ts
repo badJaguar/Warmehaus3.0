@@ -35,11 +35,16 @@ const routes: Routes = [
     loadChildren: () => import('./body-part/start-page/start-page.module').then(m => m.StartPageModule),
     data: { title: metaStartPage.ogTitleContent, description: metaStartPage.descriptionContent }
   },
+  {
+    path: 'home/instructions',
+    loadChildren: () => import('./body-part/info/info.module').then(m => m.InfoModule),
+    data: { title: metaInstructions.ogTitleContent, description: metaInstructions.descriptionContent }
+  },
 
   { path: 'home', redirectTo: '', pathMatch: 'full' },
   { path: 'contacts', redirectTo: 'home/contacts', pathMatch: 'full' },
   { path: 'info', redirectTo: 'home/instructions', pathMatch: 'full' },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 
 ];
 
