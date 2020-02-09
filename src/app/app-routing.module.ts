@@ -73,6 +73,12 @@ const routes: Routes = [
       title: metaCab20W.ogTitleContent, description: metaCab20W.descriptionContent,
     }
   },
+  {
+    path: 'warmehaus/films',
+    loadChildren: () => import('./body-part/warmehaus/films/films.module').then(m => m.FilmsModule), data: {
+      title: metaFilms.ogTitleContent, description: metaFilms.descriptionContent,
+    }
+  },
   { path: 'home', redirectTo: '', pathMatch: 'full' },
   // { path: 'contacts', redirectTo: 'home/contacts', pathMatch: 'full' },
   // { path: 'info', redirectTo: 'home/instructions', pathMatch: 'full' },

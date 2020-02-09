@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
-import { ELEMENT_DATA_MAT_CAB_14W_THIN } from 'src/data/warmehaus/cab-14W.data';
+import { ELEMENT_DATA_MAT_CAB_14W_THIN } from '../../../../data/warmehaus/cab-14W.data';
 
 @Component({
   selector: 'app-cab14-w',
@@ -13,8 +13,8 @@ export class Cab14WComponent implements OnInit {
   displayedColumns: string[] = ['name', 'nominal', 'price'];
   dataSource1 = new MatTableDataSource(ELEMENT_DATA_MAT_CAB_14W_THIN);
 
-  @ViewChild(MatSort, { static: false }) sort: MatSort;
-  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   ngOnInit() {
     this.dataSource1.sort = this.sort;
