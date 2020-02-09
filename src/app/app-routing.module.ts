@@ -1,17 +1,17 @@
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { MetaSrartPage } from './modules/open-graph/warmehaus/meta-data-startPage';
-import { MetaContacts } from './modules/open-graph/warmehaus/meta-data-contacts';
-import { MetaInstructionsPage } from './modules/open-graph/warmehaus/meta-data-instructions';
-import { MetaMat160 } from './modules/open-graph/warmehaus/meta-data-cab-metaMat160';
-import { MetaMat200 } from './modules/open-graph/warmehaus/meta-data-cab-metaMat200';
+import { RouterModule, Routes } from '@angular/router';
+import { PreloadingStrategyService } from 'src/services/PreloadStrategyService';
+import { MetaAntiIcing } from './modules/open-graph/warmehaus/meta-data-antiIcing';
 import { MetaCab14Watt } from './modules/open-graph/warmehaus/meta-data-cab-14Watt';
 import { MetaCab20Watt } from './modules/open-graph/warmehaus/meta-data-cab-20Watt';
 import { MetaFilms } from './modules/open-graph/warmehaus/meta-data-cab-metaFilms';
-import { MetaAntiIcing } from './modules/open-graph/warmehaus/meta-data-antiIcing';
+import { MetaMat160 } from './modules/open-graph/warmehaus/meta-data-cab-metaMat160';
+import { MetaMat200 } from './modules/open-graph/warmehaus/meta-data-cab-metaMat200';
 import { MetaTermostats } from './modules/open-graph/warmehaus/meta-data-cab-metaTernostats';
-import { LocationStrategy, PathLocationStrategy } from '@angular/common';
-import { PreloadingStrategyService } from 'src/services/PreloadStrategyService';
+import { MetaContacts } from './modules/open-graph/warmehaus/meta-data-contacts';
+import { MetaInstructionsPage } from './modules/open-graph/warmehaus/meta-data-instructions';
+import { MetaSrartPage } from './modules/open-graph/warmehaus/meta-data-startPage';
 import { MetaWarmehaus } from './modules/open-graph/warmehaus/meta-data-warmehaus';
 
 const metaStartPage: MetaSrartPage = new MetaSrartPage();
@@ -60,6 +60,12 @@ const routes: Routes = [
       title: meta200Watt.ogTitleContent, description: meta200Watt.descriptionContent,
     }
 
+  },
+  {
+    path: 'warmehaus/cable-14Watt',
+    loadChildren: () => import('./body-part/warmehaus/cab14-w/cab14-w.module').then(m => m.Cab14WModule), data: {
+      title: metaCab14W.ogTitleContent, description: metaCab14W.descriptionContent,
+    }
   },
   { path: 'home', redirectTo: '', pathMatch: 'full' },
   // { path: 'contacts', redirectTo: 'home/contacts', pathMatch: 'full' },
