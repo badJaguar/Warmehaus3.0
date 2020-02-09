@@ -12,10 +12,12 @@ import { MetaAntiIcing } from './modules/open-graph/warmehaus/meta-data-antiIcin
 import { MetaTermostats } from './modules/open-graph/warmehaus/meta-data-cab-metaTernostats';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { PreloadingStrategyService } from 'src/services/PreloadStrategyService';
+import { MetaWarmehaus } from './modules/open-graph/warmehaus/meta-data-warmehaus';
 
 const metaStartPage: MetaSrartPage = new MetaSrartPage();
 const metaContacts: MetaContacts = new MetaContacts();
 const metaInstructions: MetaInstructionsPage = new MetaInstructionsPage();
+const metaWarmehaus: MetaWarmehaus = new MetaWarmehaus();
 const meta160Watt: MetaMat160 = new MetaMat160();
 const meta200Watt: MetaMat200 = new MetaMat200();
 const metaCab14W: MetaCab14Watt = new MetaCab14Watt();
@@ -40,11 +42,29 @@ const routes: Routes = [
     loadChildren: () => import('./body-part/info/info.module').then(m => m.InfoModule),
     data: { title: metaInstructions.ogTitleContent, description: metaInstructions.descriptionContent }
   },
+  {
+    path: 'warmehaus',
+    loadChildren: () => import('./body-part/warmehaus/main-page/main-page.module').then(m => m.MainPageModule), data: {
+      title: metaWarmehaus.ogTitleContent, description: metaWarmehaus.descriptionContent,
+    }
+  },
+  {
+    path: 'warmehaus/mat-160Watt',
+    loadChildren: () => import('./body-part/warmehaus/warming-mat160-w/warming-mat160-w.module').then(m => m.WarmingMat160WModule), data: {
+      title: meta160Watt.ogTitleContent, description: meta160Watt.descriptionContent,
+    }
+  },
+  {
+    path: 'warmehaus/mat-200Watt',
+    loadChildren: () => import('./body-part/warmehaus/warming-mat200-w/warming-mat200-w.module').then(m => m.WarmingMat200WModule), data: {
+      title: meta200Watt.ogTitleContent, description: meta200Watt.descriptionContent,
+    }
 
+  },
   { path: 'home', redirectTo: '', pathMatch: 'full' },
-  { path: 'contacts', redirectTo: 'home/contacts', pathMatch: 'full' },
-  { path: 'info', redirectTo: 'home/instructions', pathMatch: 'full' },
-  { path: '**', redirectTo: '', pathMatch: 'full' },
+  // { path: 'contacts', redirectTo: 'home/contacts', pathMatch: 'full' },
+  // { path: 'info', redirectTo: 'home/instructions', pathMatch: 'full' },
+  // { path: '**', redirectTo: '', pathMatch: 'full' },
 
 ];
 

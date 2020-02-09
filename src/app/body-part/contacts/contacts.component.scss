@@ -1,4 +1,4 @@
-@import "../../styles/img-buttons";
+// @import "../../styles/img-buttons";
 
 @media screen and (max-width: 930px) {
   .business-hours {
@@ -28,10 +28,28 @@
 .iframe-container {
   overflow: hidden;
   height: 100%;
-  padding-top: 100%;
+  padding-top: 50%;
   position: relative;
   padding-bottom: inherit;
-  margin: 0 2em 2em 2em;
+}
+
+.maps {
+  margin: auto;
+  max-width: 72rem;
+}
+
+.mat-list-item-content {
+  display: flex !important
+}
+
+.op-icon {
+  vertical-align: middle;
+  border-style: none;
+  margin-right: 1rem;
+}
+
+.phones {
+  text-decoration: underline;
 }
 
 .iframe-container iframe {
@@ -64,11 +82,6 @@
   margin: auto;
 }
 
-.card {
-  max-width: 1200px;
-  margin: auto;
-}
-
 .section {
   padding: initial;
 }
@@ -90,10 +103,6 @@
   justify-content: space-evenly;
   align-items: baseline;
   flex-wrap: wrap
-}
-
-.content {
-  margin: 1em 3em 1em 3em;
 }
 
 h1,
@@ -153,13 +162,29 @@ h2 {
 .demo-bg {
   background: #ffac0c;
   margin-top: 60px;
+
+  &>div {
+    width: inherit;
+    padding: 30px;
+    margin: auto;
+  }
+}
+
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  background: transparent;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .business-hours {
   background: #222;
   padding: 40px 14px;
   position: relative;
-  min-width: 260px;
+  min-width: 260px !important;
 }
 
 .business-hours:before {
@@ -189,7 +214,9 @@ span {
   color: rgb(219, 217, 217);
   line-height: 30px;
   border-bottom: 1px solid rgb(95, 95, 95);
-  filter: grayscale(1) contrast(1)
+  filter: grayscale(1) contrast(1);
+  margin: auto;
+  display: block;
 }
 
 .business-hours li:last-child {
@@ -201,15 +228,10 @@ span {
   filter: contrast(1)
 }
 
-h6 {
+h6,
+h5 {
   color: aliceblue;
   text-align: center;
-}
-
-button:focus {
-  outline: none;
-  border: 0;
-  background: none
 }
 
 a:hover {
@@ -224,8 +246,11 @@ button {
 }
 
 a,
-b {
-  color: black;
+b,
+p,
+h4 {
+  color: #1E1E1E;
+  ;
   height: inherit;
   background: inherit;
   -webkit-background-clip: text;
@@ -269,5 +294,5 @@ b {
 }
 
 .clearfix {
-  @include fluid-type(font-size, 600px, 1200px, 12px, 20px);
+  @include fluid-type(font-size, 600px, 1200px, 12px, 18px);
 }

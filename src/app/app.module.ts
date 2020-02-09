@@ -20,9 +20,10 @@ import { FlexLayoutModule, BREAKPOINT } from '@angular/flex-layout';
 import { GtagModule } from 'angular-gtag';
 import { SafeHtmlPipe } from './safe-html';
 import { CookieService } from 'ngx-cookie-service';
-import { ChipsComponent } from './header-part/chips/chips.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PinchZoomModule } from 'ngx-pinch-zoom';
+import { ChipsComponent } from './header-part/chips/chips.component';
+import { ChipsModule } from './header-part/chips/chips.module';
 
 
 const EXTRA_BREAKPOINTS = [{
@@ -42,10 +43,11 @@ const EXTRA_BREAKPOINTS = [{
     HeaderMenuComponent,
     SchemaMarkupComponent,
     BreadcrumbsComponent,
-    ChipsComponent,
+    SafeHtmlPipe,
   ],
   imports: [
     BrowserAnimationsModule,
+    ChipsModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     // https://github.com/angular/flex-layout
     FlexLayoutModule.withConfig({
@@ -63,7 +65,7 @@ const EXTRA_BREAKPOINTS = [{
     ScrollingModule,
     NgxJsonLdModule,
     MaterialShareModule,
-    PinchZoomModule
+    PinchZoomModule,
   ],
   entryComponents: [PhonesSheetComponent],
   exports: [],

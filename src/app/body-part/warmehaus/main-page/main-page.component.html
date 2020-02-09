@@ -1,0 +1,20 @@
+<div>
+  <h2>WÄRMEHAUS</h2>
+  <mat-divider class="divider"></mat-divider>
+</div>
+<div class="container">
+  <mat-card class="mt-2 item" *ngFor="let item of warmehausTiles" style="width: 315px;">
+    <mat-card-header>
+      <mat-card-title routerLink="{{item.route}}" routerLinkActive="active">
+        {{item.alt}}
+      </mat-card-title>
+    </mat-card-header>
+    <img class="image" routerLink="{{item.route}}" routerLinkActive="active" mat-card-image src="{{item.picUrl}}"
+      alt="{{item.alt}}">
+    <mat-card-content>
+      <p>
+        {{item.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
