@@ -67,6 +67,12 @@ const routes: Routes = [
       title: metaCab14W.ogTitleContent, description: metaCab14W.descriptionContent,
     }
   },
+  {
+    path: 'warmehaus/cable-20Watt',
+    loadChildren: () => import('./body-part/warmehaus/cab20-w/cab20-w.module').then(m => m.Cab20WModule), data: {
+      title: metaCab20W.ogTitleContent, description: metaCab20W.descriptionContent,
+    }
+  },
   { path: 'home', redirectTo: '', pathMatch: 'full' },
   // { path: 'contacts', redirectTo: 'home/contacts', pathMatch: 'full' },
   // { path: 'info', redirectTo: 'home/instructions', pathMatch: 'full' },
